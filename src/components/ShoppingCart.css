@@ -1,0 +1,43 @@
+.shopping-cart {
+    width: 100%;
+    text-align: center;
+}
+  
+  .shopping-cart h2 {
+    margin-bottom: 10px;
+  }
+  
+  .shopping-cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .shopping-cart li {
+    margin-bottom: 15px;
+  }
+  
+  .shopping-cart p {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .shopping-cart button {
+    background-color: #dc3545;
+    color: white;
+    border:none;
+    height: 30px;
+  }
+  
+  .shopping-cart button:hover {
+    background-color: #c82333;
+  }
+  
+  .shopping-cart .proceed-btn {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+  }
+  .shopping-cart img{
+    width: 120px;
+  }
+  

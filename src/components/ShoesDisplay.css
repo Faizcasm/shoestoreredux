@@ -1,0 +1,39 @@
+.shoes-display {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+   text-align: center;
+  }
+  
+  .shoes-display h2 {
+    margin-bottom: 10px;
+  }
+  
+  .shoes-display ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .shoes-display li {
+    margin-bottom: 20px;
+  }
+  
+  .shoes-display button {
+    background-color: #28a745;
+    border: none;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .shoes-display button:hover {
+    background-color: #218838;
+  }
+  .shoes-display img{
+    width: 200px;
+    height: 200px; 
+  }
+  
