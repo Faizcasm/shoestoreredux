@@ -13,7 +13,8 @@ const PaymentPage = () => {
                 <ul>
                     {cart.items.map(item => (
                         <li key={item.id}>
-                            <span>{item.name} - ${item.price} x {item.quantity}</span>
+                        <img src={item.image} alt='img'></img>
+                            <span>{item.name} - ${item.price} x {item.quantity}</span><br/>
                         </li>
                     ))}
                 </ul>

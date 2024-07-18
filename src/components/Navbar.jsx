@@ -1,12 +1,8 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './Navbar.css'; // Import the CSS for styling
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-    const navigaet = useNavigate()
-    function navigates(){
-        navigaet('/cart')
-    }
     return (
         <nav className="navbar">
             <div className="navbar-logo">
@@ -17,15 +13,17 @@ const Navbar = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/">Category</Link>
+                    <Link to="/category">Category</Link>
                 </li>
                 <li>
-                    <Link to="/">About</Link>
+                    <Link to="/about">About</Link>
                 </li>
             </ul>
-            <div className="navbar-cart" onClick={navigates}>
-                
-            </div>
+            {/* <div className="navbar-cart">
+                <Link to="/cart">
+                    <img src="/cart-icon.png" alt="Cart" />
+                </Link>
+            </div> */}
         </nav>
     );
 };

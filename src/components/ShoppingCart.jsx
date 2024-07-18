@@ -1,16 +1,16 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeItem } from '../features/cart/cartSlice';
-import {useNavigate}  from 'react-router-dom';
+import { removeItem, incrementItem, decrementItem } from '../features/cart/cartSlice';
+import {  useNavigate } from 'react-router-dom';
 import './ShoppingCart.css';
 
 const ShoppingCart = () => {
     const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
-    const navigate = useNavigate()
+    const navigate =useNavigate()
 
     const handleProceedToPayment = () => {
-       navigate('/payment');
+       navigate('/payment')
     };
 
     return (
@@ -23,9 +23,15 @@ const ShoppingCart = () => {
                     <ul>
                         {cart.items.map(item => (
                             <li key={item.id}>
-                            <img src={item.image} alt='img'></img><br/><br/>
-                                <span>{item.name} - ${item.price} x {item.quantity}</span><br/><br/>
-                                <button onClick={() => dispatch(removeItem(item))}>Remove</button><br/><hr/>
+                                <img src={item.image} alt={item.name} />
+                                <span>{item.name} - ${item.price}</span>
+                                <div className="quantity-controls">
+                                    <button onClick={() => dispatch(decrementItem(item))}>-</button>
+                                    <span>{item.quantity}</span>
+                                    <button onClick={() => dispatch(incrementItem(item))}>+</button>
+                                </div>
+                                <button className='rmv' onClick={() => dispatch(removeItem(item))}>Remove</button>
+                            
                             </li>
                         ))}
                     </ul>
